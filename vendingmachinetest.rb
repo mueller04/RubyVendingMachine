@@ -21,4 +21,10 @@ class VendingMachineTest < Test::Unit::TestCase
     assert_equal(0.25, result)
   end
 
+  def test_insert_invalid_coin_returns_nil
+    machine = Machine.new
+    result = machine.insert(:penny)
+    assert_equal(-1, result)
+  end
+
 end

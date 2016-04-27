@@ -5,8 +5,10 @@ class Machine
           return 0.05
       elsif coin == :dime
           return 0.1
-      else
+      elsif coin == :quarter
           return 0.25
+      else
+          return -1
       end
     end
 
