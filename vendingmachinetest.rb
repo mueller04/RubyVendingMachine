@@ -15,4 +15,10 @@ class VendingMachineTest < Test::Unit::TestCase
     assert_equal(0.10, result)
   end
 
+  def test_insert_quarter_returns_25cents
+    machine = Machine.new
+    result = machine.insert(:dime)
+    assert_equal(0.10, result)
+  end
+
 end
