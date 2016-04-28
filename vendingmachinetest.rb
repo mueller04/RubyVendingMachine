@@ -3,7 +3,7 @@ require 'test/unit'
 
 class VendingMachineTest < Test::Unit::TestCase
 
-  def test_insert_nickel_return_5cents
+  def test_insert_nickel_returns_5cents
     machine = Machine.new
     result = machine.insert(:nickel)
     assert_equal(0.05, result)
@@ -24,7 +24,7 @@ class VendingMachineTest < Test::Unit::TestCase
   def test_insert_invalid_coin_returns_nil
     machine = Machine.new
     result = machine.insert(:penny)
-    assert_equal(-1, result)
+    assert_equal(nil, result)
   end
 
 end

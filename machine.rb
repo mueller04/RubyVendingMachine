@@ -1,15 +1,15 @@
 class Machine
 
-    def insert(coin)
-      if coin == :nickel
-          return 0.05
-      elsif coin == :dime
-          return 0.1
-      elsif coin == :quarter
-          return 0.25
-      else
-          return -1
-      end
+  @@VALID_COINS = {nickel: 0.05, dime: 0.1, quarter: 0.25}
+
+    def insert(inserted_coin)
+      returnVal = nil
+        @@VALID_COINS.each do |coin, value|
+            if inserted_coin == coin
+                returnVal = value
+            end
+        end
+        return returnVal
     end
 
 end
