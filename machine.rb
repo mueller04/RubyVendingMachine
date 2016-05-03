@@ -12,4 +12,6 @@ class Machine
         return returnVal
     end
 
+    
+
 end
