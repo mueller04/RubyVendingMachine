@@ -27,4 +27,16 @@ class VendingMachineTest < Test::Unit::TestCase
     assert_equal(nil, result)
   end
 
+  def test_cola_button_returns_thankyou_if_enough_money_inserted
+    machine = Machine.new
+    machine.insert(:quarter)
+    machine.insert(:quarter)
+    machine.insert(:quarter)
+    machine.insert(:quarter)
+
+    result = machine.colabutton()
+
+    assert_equal("Thank You", result)
+  end
+
 end
